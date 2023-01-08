@@ -1,26 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
 
+  <main>
+    <div class="conatainer">
+      <div class="calc-wrapper">
+        <div class="calc-header">
+          <h1>calc</h1>
+          <div>Theme</div>
+        </div>
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+        <div class="calc-body">
+          <div class="display"></div>
+          <div class="functions">
+            <div class="top">
+              <div class="row">
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>Del</div>
+              </div>
+
+              <div class="row">
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>+</div>
+              </div>
+
+              <div class="row">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>-</div>
+              </div>
+
+              <div class="row">
+                <div>.</div>
+                <div>0</div>
+                <div>/</div>
+                <div>x</div>
+              </div>
+              <div class="row"></div>
+            </div>
+
+            <div class="bottom">
+              <div>Reset</div>
+              <div>=</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="attribution">
+    <div class="container">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer>
 </body>
+
 </html>
