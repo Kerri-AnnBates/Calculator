@@ -1,0 +1,22 @@
+{
+  "name": "calculator-app-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Calculator app coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w styles/scss/ -o public/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kerri-AnnBates/Calculator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kerri-AnnBates/Calculator/issues"
+  },
+  "homepage": "https://github.com/Kerri-AnnBates/Calculator#readme",
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
