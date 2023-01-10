@@ -1,3 +1,7 @@
+html {
+    font-size: 100%;
+}
+
 html,
 body {
     height: 100%;
@@ -9,6 +13,7 @@ body {
     flex-direction: column;
     background-color: $grayBlue;
     padding: 0 20px;
+    font-size: 1rem;
 }
 
 main {
@@ -23,6 +28,7 @@ h3,
 h4,
 h5,
 h6 {
+    font-size: 1rem;
     margin: 0;
 }
 

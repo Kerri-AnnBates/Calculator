@@ -2,3 +2,22 @@
     display: flex;
     justify-content: center;
 }
+
+.calc-header {
+    color: white;
+    font-weight: bold;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.display {
+    input {
+        padding: 10px;
+        text-align: right;
+        background-color: $darkBlue;
+        border: none;
+        border-radius: 4px;
+        color: white;
+    }
+}
