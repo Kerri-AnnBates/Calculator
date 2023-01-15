@@ -1,8 +1,23 @@
-$grayBlue: #2D3651;
-$lightBlue: #535D87;
-$grayishWhite: #E3DCD3;
-$darkBlue: #131826;
-$mediumBlue: #1C2133;
-$buttonText: #343847;
-$alert: #C42B25;
-$bigFont: 2.25rem;
+// Main
+$textFont: 2rem;
+
+/*************
+* THEME 1    *
+**************/
+
+// Backgrounds
+$mainBackground: #3a4764;
+$toggleKeypadBackground: #232c43;
+$screenBackground: #182034;
+
+// Keys
+$keyBackground: #637097;
+$keyShadow: #404e72;
+$keyToggle: #d03f2f;
+$keyShadow2: #93261a;
+$keyBackground2: #eae3dc;
+$keyShadow3: #b4a597;
+
+// Text
+$keyText: #444b5a;
+$white: #fff;

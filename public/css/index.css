@@ -303,6 +303,9 @@ template {
 [hidden] {
   display: none; }
 
+/*************
+* THEME 1    *
+**************/
 * {
   box-sizing: border-box; }
 
@@ -317,9 +320,11 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #2D3651;
+  background-color: #3a4764;
   padding: 0 20px;
-  font-size: 1rem; }
+  font-size: 2rem;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700; }
 
 main {
   flex: 1;
@@ -339,9 +344,8 @@ footer {
   padding: 15px 0; }
 
 button {
-  color: #1C2133;
-  background-color: #E3DCD3;
-  font-size: 2.25rem;
+  color: #637097;
+  background-color: #eae3dc;
   width: 100%;
   padding: 15px;
   border-radius: 6px; }
@@ -356,7 +360,7 @@ button {
 .calculator {
   display: flex;
   justify-content: center;
-  background-color: #2D3651; }
+  background-color: #3a4764; }
 
 .calc-wrapper {
   max-width: 500px;
@@ -374,15 +378,14 @@ button {
   .display input {
     padding: 10px 20px;
     text-align: right;
-    background-color: #131826;
+    background-color: #182034;
     border: none;
     border-radius: 6px;
-    color: white;
-    width: 100%;
-    font-size: 2.25rem; }
+    color: #fff;
+    width: 100%; }
 
-.functions {
-  background-color: #1C2133;
+.keypad {
+  background-color: #232c43;
   border-radius: 6px;
   padding: 20px;
   font-size: 1.25rem; }
@@ -401,9 +404,10 @@ button {
   margin-top: 20px; }
 
 .equal {
-  background-color: #C42B25;
-  color: white; }
+  background-color: #93261a;
+  color: white;
+  background-color: #d03f2f; }
 
 .option {
-  background-color: #535D87;
+  background-color: #637097;
   color: white; }

@@ -1,7 +1,7 @@
 .calculator {
     display: flex;
     justify-content: center;
-    background-color: $grayBlue;
+    background-color: $mainBackground;
 }
 
 .calc-wrapper {
@@ -23,17 +23,16 @@
     input {
         padding: 10px 20px;
         text-align: right;
-        background-color: $darkBlue;
+        background-color: $screenBackground;
         border: none;
         border-radius: 6px;
-        color: white;
+        color: $white;
         width: 100%;
-        font-size: $bigFont;
     }
 }
 
-.functions {
-    background-color: $mediumBlue;
+.keypad {
+    background-color: $toggleKeypadBackground;
     border-radius: 6px;
     padding: 20px;
     font-size: 1.25rem;
@@ -55,11 +54,12 @@
 }
 
 .equal {
-    background-color: $alert;
+    background-color: $keyShadow2;
     color: white;
+    background-color: $keyToggle;
 }
 
 .option {
-    background-color: $lightBlue;
+    background-color: $keyBackground;
     color: white;
 }

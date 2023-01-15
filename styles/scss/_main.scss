@@ -15,9 +15,11 @@ body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: $grayBlue;
+    background-color: $mainBackground;
     padding: 0 20px;
-    font-size: 1rem;
+    font-size: 2rem;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
 }
 
 main {
@@ -41,9 +43,8 @@ footer {
 }
 
 button {
-    color: $mediumBlue;
-    background-color: $grayishWhite;
-    font-size: $bigFont;
+    color: $keyBackground;
+    background-color: $keyBackground2;
     width: 100%;
     padding: 15px;
     border-radius: 6px;
