@@ -354,7 +354,10 @@ button {
   background-color: #eae3dc;
   width: 100%;
   padding: 15px;
-  border-radius: 6px; }
+  border-radius: 6px;
+  border: none;
+  font-size: 2rem;
+  box-shadow: 0 4px 0 #b4a597; }
   button:hover {
     cursor: pointer; }
 
@@ -393,27 +396,30 @@ button {
 .keypad {
   background-color: #232c43;
   border-radius: 6px;
-  padding: 20px;
+  padding: 25px;
   font-size: 1.25rem; }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  column-gap: 20px;
-  row-gap: 20px; }
+  column-gap: 25px;
+  row-gap: 25px; }
 
 .bottom {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 20px;
-  margin-top: 20px; }
+  column-gap: 25px;
+  margin-top: 25px; }
 
 .equal {
   background-color: #93261a;
   color: white;
-  background-color: #d03f2f; }
+  background-color: #d03f2f;
+  box-shadow: 0 4px 0 #93261a; }
 
 .option {
   background-color: #637097;
-  color: white; }
+  color: white;
+  text-transform: uppercase;
+  box-shadow: 0 4px 0 #404e72; }

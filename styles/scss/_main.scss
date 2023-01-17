@@ -48,6 +48,9 @@ button {
     width: 100%;
     padding: 15px;
     border-radius: 6px;
+    border: none;
+    font-size: 2rem;
+    @include key-shadow($keyShadow3);
 
     &:hover {
         cursor: pointer;
