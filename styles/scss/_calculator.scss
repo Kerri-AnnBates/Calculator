@@ -48,6 +48,25 @@
     margin-right: 10px;
 }
 
+.theme-picker {
+    position: relative;
+
+    label {
+        font-size: 0.75rem;
+        margin-right: 5px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.theme-labels {
+    position: absolute;
+    top: -20px;
+    width: 100%;
+}
+
 .keypad {
     background-color: $toggleKeypadBackground;
     border-radius: 6px;
