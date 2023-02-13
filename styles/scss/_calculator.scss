@@ -118,12 +118,12 @@
         opacity: 0;
         appearance: none;
 
+        &:checked {
+            opacity: 1;
+        }
+
         &:hover {
             cursor: pointer;
         }
     }
-}
-
-#theme-1 {
-    opacity: 1;
 }

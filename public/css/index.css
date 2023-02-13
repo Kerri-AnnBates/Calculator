@@ -468,8 +468,7 @@ button {
     background-color: #d03f2f;
     opacity: 0;
     appearance: none; }
+    .theme-selectors input:checked {
+      opacity: 1; }
     .theme-selectors input:hover {
       cursor: pointer; }
-
-#theme-1 {
-  opacity: 1; }
