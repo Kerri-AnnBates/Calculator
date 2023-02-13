@@ -387,7 +387,8 @@ button {
   padding: 20px 0;
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  position: relative; }
   .calc-header h1 {
     flex: 1; }
 
@@ -412,18 +413,16 @@ button {
 .theme-header {
   margin-right: 10px; }
 
-.theme-picker {
-  position: relative; }
-  .theme-picker label {
-    font-size: 0.75rem;
-    margin-right: 5px; }
-    .theme-picker label:last-child {
-      margin-right: 0; }
+.theme-picker label {
+  font-size: 0.75rem;
+  margin-right: 8px; }
+  .theme-picker label:last-child {
+    margin-right: 0; }
 
 .theme-labels {
   position: absolute;
   top: -20px;
-  width: 100%; }
+  right: 10px; }
 
 .keypad {
   background-color: #232c43;
@@ -459,12 +458,12 @@ button {
 .theme-selectors {
   display: flex;
   justify-content: center;
-  border: 3px solid #232c43;
+  border: 5px solid #232c43;
   border-radius: 50px;
   background-color: #232c43; }
   .theme-selectors input {
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
     border-radius: 50%;
     background-color: #d03f2f;
     opacity: 0;

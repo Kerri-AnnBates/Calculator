@@ -16,6 +16,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 
     h1 {
         flex: 1;
@@ -49,11 +50,10 @@
 }
 
 .theme-picker {
-    position: relative;
 
     label {
         font-size: 0.75rem;
-        margin-right: 5px;
+        margin-right: 8px;
 
         &:last-child {
             margin-right: 0;
@@ -64,7 +64,7 @@
 .theme-labels {
     position: absolute;
     top: -20px;
-    width: 100%;
+    right: 10px;
 }
 
 .keypad {
@@ -106,13 +106,13 @@
 .theme-selectors {
     display: flex;
     justify-content: center;
-    border: 3px solid $toggleKeypadBackground;
+    border: 5px solid $toggleKeypadBackground;
     border-radius: 50px;
     background-color: $toggleKeypadBackground;
 
     input {
-        height: 25px;
-        width: 25px;
+        height: 20px;
+        width: 20px;
         border-radius: 50%;
         background-color: $keyToggle;
         opacity: 0;
