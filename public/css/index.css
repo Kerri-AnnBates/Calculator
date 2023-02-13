@@ -455,3 +455,22 @@ button {
   color: white;
   text-transform: uppercase;
   box-shadow: 0 4px 0 #404e72; }
+
+.theme-selectors {
+  display: flex;
+  justify-content: center;
+  border: 3px solid #232c43;
+  border-radius: 50px;
+  background-color: #232c43; }
+  .theme-selectors input {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #d03f2f;
+    opacity: 0;
+    appearance: none; }
+    .theme-selectors input:hover {
+      cursor: pointer; }
+
+#theme-1 {
+  opacity: 1; }

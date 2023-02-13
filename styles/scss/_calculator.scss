@@ -102,3 +102,28 @@
     text-transform: uppercase;
     @include key-shadow($keyShadow);
 }
+
+.theme-selectors {
+    display: flex;
+    justify-content: center;
+    border: 3px solid $toggleKeypadBackground;
+    border-radius: 50px;
+    background-color: $toggleKeypadBackground;
+
+    input {
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        background-color: $keyToggle;
+        opacity: 0;
+        appearance: none;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+#theme-1 {
+    opacity: 1;
+}
