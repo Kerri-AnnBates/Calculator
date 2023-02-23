@@ -33,17 +33,32 @@ class Calculator {
     }
 
     add() {
-        this.#total = this.#operand1 + this.#operand2;
+        if (this.#total === 0 || null) {
+            this.#total = this.#operand1 + this.#operand2;
+        } else {
+            this.#total += this.#operand2;
+        }
+
         return this.#total;
     }
 
     subtract() {
-        this.#total = this.#operand1 - this.#operand2;
+        if (this.#total === 0 || null) {
+            this.#total = this.#operand1 - this.#operand2;
+        } else {
+            this.#total -= this.#operand2;
+        }
+
         return this.#total;
     }
 
     multiply() {
-        this.#total = this.#operand1 * this.#operand2;
+        if (this.#total === 0 || null) {
+            this.#total = this.#operand1 * this.#operand2;
+        } else {
+            this.#total *= this.#operand2;
+        }
+
         return this.#total;
     }
 
@@ -52,7 +67,12 @@ class Calculator {
             return console.log("cannot divide by 0");
         }
 
-        this.#total = this.#operand1 / this.#operand2;
+        if (this.#total === 0 || null) {
+            this.#total = this.#operand1 / this.#operand2;
+        } else {
+            this.#total /= this.#operand2;
+        }
+
         return this.#total;
     }
 
