@@ -1,27 +1,28 @@
 class Calculator {
-    #operand1;
-    #operand2;
+    #number1;
+    #number2;
     #total;
 
-    constructor(operand1, operand2) {
-        this.#operand1 = operand1;
-        this.#operand2 = operand2;
+    constructor() {
+        this.#number1 = 0;
+        this.#number2 = 0;
+        this.#total = 0;
     }
 
-    get operand1() {
-        return this.#operand1;
+    get number1() {
+        return this.#number1;
     }
 
-    set operand1(operand1) {
-        this.#operand1 = operand1;
+    set number1(number1) {
+        this.#number1 = number1;
     }
 
-    get operand2() {
-        return this.#operand2;
+    get number2() {
+        return this.#number2;
     }
 
-    set operand2(operand2) {
-        this.#operand2 = operand2;
+    set number2(number2) {
+        this.#number2 = number2;
     }
 
     get total() {
@@ -33,52 +34,29 @@ class Calculator {
     }
 
     add() {
-        if (this.#total === 0 || null) {
-            this.#total = this.#operand1 + this.#operand2;
-        } else {
-            this.#total += this.#operand2;
-        }
-
-        return this.#total;
+        this.#total = this.#number1 + this.#number2;
     }
 
     subtract() {
-        if (this.#total === 0 || null) {
-            this.#total = this.#operand1 - this.#operand2;
-        } else {
-            this.#total -= this.#operand2;
-        }
-
-        return this.#total;
+        this.#total = this.#number1 - this.#number2;
     }
 
     multiply() {
-        if (this.#total === 0 || null) {
-            this.#total = this.#operand1 * this.#operand2;
-        } else {
-            this.#total *= this.#operand2;
-        }
-
-        return this.#total;
+        this.#total = this.#number1 * this.#number2;
     }
 
     divide() {
-        if (this.#operand2 == 0) {
-            return console.log("cannot divide by 0");
-        }
-
-        if (this.#total === 0 || null) {
-            this.#total = this.#operand1 / this.#operand2;
+        if (this.#number1 == 0) {
+            console.log("cannot divide by 0");
+            return;
         } else {
-            this.#total /= this.#operand2;
+            this.#total = this.#number1 / this.#number2;
         }
-
-        return this.#total;
     }
 
     clearAll() {
-        this.#operand1 = 0;
-        this.#operand2 = 0;
+        this.#number1 = 0;
+        this.#number2 = 0;
         this.#total = 0;
     }
 
