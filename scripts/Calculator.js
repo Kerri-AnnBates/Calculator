@@ -1,6 +1,7 @@
 class Calculator {
     #number1;
     #number2;
+    #operator;
     #total;
 
     constructor() {
@@ -31,6 +32,14 @@ class Calculator {
 
     set total(total) {
         this.#total = total;
+    }
+
+    get operator() {
+        return this.#operator;
+    }
+
+    set operator(operator) {
+        this.#operator = operator;
     }
 
     add() {
