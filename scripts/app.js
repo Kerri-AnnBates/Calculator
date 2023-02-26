@@ -5,8 +5,9 @@ const calc = new Calculator();
 const buttons = document.querySelectorAll("button");
 const screen = document.querySelector("#screen");
 let val = "";
-let query = "";
-screen.value = calc.number1;
+let num = 0;
+let num2;
+screen.value = calc.total;
 
 const operators = {
     "+": 1,
@@ -65,7 +66,15 @@ const calculate = (operator) => {
     }
 }
 
-calc.number1 = 3;
-calc.number2 = 3;
-calc.add();
+// number1 is initially 0;
+num2 = 3;
+num = calc.add(num2);
+console.log(calc.total);
+
+num2 = 3;
+num = calc.add(num2);
+console.log(calc.total);
+
+num2 = 3;
+num = calc.add(3);
 console.log(calc.total);
