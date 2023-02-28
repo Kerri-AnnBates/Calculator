@@ -1,8 +1,30 @@
 class Calculator {
+    #num1;
+    #num2;
     #total;
+    #operator;
 
-    constructor() {
-        this.#total = 0;
+    constructor(num1, num2, total, operator) {
+        this.#num1 = num1;
+        this.#num2 = num2;
+        this.#total = total;
+        this.#operator = operator;
+    }
+
+    get num1() {
+        return this.#num1;
+    }
+
+    set num1(num) {
+        this.#num1 = num;
+    }
+
+    get num2() {
+        return this.#num2;
+    }
+
+    set num2(num) {
+        this.#num2 = num;
     }
 
     get total() {
@@ -13,34 +35,63 @@ class Calculator {
         this.#total = total;
     }
 
-    add(num) {
-        this.#total += num;
-        return this.#total;
+    get operator() {
+        return this.#operator;
     }
 
-    subtract(num) {
-        this.#total -= num;
-        return this.#total;
+    set operator(operator) {
+        this.#operator = operator;
     }
 
-    multiply(num) {
-        this.#total *= num;
-        return this.#total;
+    #add(num1, num2) {
+        return num1 + num2;
     }
 
-    divide(num) {
-        if (num == 0) {
-            console.log("cannot divide by 0");
-            return;
-        } else {
-            this.#total /= num;
+    #subtract(num1, num2) {
+        return num1 - num2;
+    }
+
+    #multiply(num1, num2) {
+        return num1 * num2;
+    }
+
+    #divide(num1, num2) {
+        if (num2 == 0) {
+            return "Invalid operation! Cannot divide by 0";
         }
 
+        return num1 / num2;
+    }
+
+    calculate() {
+        console.log("operator", this.#operator);
+        switch (this.#operator) {
+            case "+":
+                this.#total = this.#add(this.#num1, this.#num2);
+                break;
+            case "-":
+                this.#total = this.#subtract(this.#num1, this.#num2);
+                break;
+            case "*":
+                this.#total = this.#multiply(this.#num1, this.#num2);
+                break;
+            case "/":
+                this.#total = this.#divide(this.#num1, this.#num2);
+                break;
+            default:
+                "Invalid operator"
+                break;
+        }
+
+        console.log(this.#num1, this.#num2);
         return this.#total;
     }
 
     clearAll() {
+        this.#num1 = 0;
+        this.#num2 = 0;
         this.#total = 0;
+        this.#operator = null;
     }
 
 }
