@@ -64,7 +64,6 @@ class Calculator {
     }
 
     calculate() {
-        console.log("operator", this.#operator);
         switch (this.#operator) {
             case "+":
                 this.#total = this.#add(this.#num1, this.#num2);
@@ -83,7 +82,7 @@ class Calculator {
                 break;
         }
 
-        console.log(this.#num1, this.#num2);
+        console.log("operator: " + this.#operator, "num1: " + this.#num1, " num2: " + this.#num2);
         return this.#total;
     }
 
