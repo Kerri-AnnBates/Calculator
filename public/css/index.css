@@ -443,17 +443,17 @@ button {
   column-gap: 25px;
   margin-top: 25px; }
 
-.equal {
-  background-color: #93261a;
-  color: white;
-  background-color: #d03f2f;
-  box-shadow: 0 4px 0 #93261a; }
-
 .option {
   background-color: #637097;
   color: white;
   text-transform: uppercase;
   box-shadow: 0 4px 0 #404e72; }
+
+.equal {
+  background-color: #93261a;
+  color: white;
+  background-color: #d03f2f;
+  box-shadow: 0 4px 0 #93261a; }
 
 .theme-selectors {
   display: flex;

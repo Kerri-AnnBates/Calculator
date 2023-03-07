@@ -89,18 +89,18 @@
     margin-top: 25px;
 }
 
-.equal {
-    background-color: $keyShadow2;
-    color: white;
-    background-color: $keyToggle;
-    @include key-shadow($keyShadow2);
-}
-
 .option {
     background-color: $keyBackground;
     color: white;
     text-transform: uppercase;
     @include key-shadow($keyShadow);
+}
+
+.equal {
+    background-color: $keyShadow2;
+    color: white;
+    background-color: $keyToggle;
+    @include key-shadow($keyShadow2);
 }
 
 .theme-selectors {
