@@ -25,23 +25,20 @@ class CalculatorUI {
         const isDecimal = e.target.id == "decimal";
         const key = e.target.dataset.key;
 
-        console.log("operated selected:", this.operatorSelected);
         if (isNumber || isDecimal) {
-            // console.log("I'm a number. Or decimal");
-
             // Update numbers in screen
             this.updateDisplay(key, isDecimal);
+
             this.currNumber = this.convertIfNumber(this.displayScreen.value);
             this.operatorSelected = false;
         }
 
         if (isOperator) {
-            // console.log("I'm an operator", key);
-            console.log("Current number is", this.currNumber);
-            console.log("Previous number is", this.prevNumber);
+            // console.log("Current number is", this.currNumber);
+            // console.log("Previous number is", this.prevNumber);
 
-            this.operatorSelected = true;
             this.handleOperatorClick(key);
+            this.operatorSelected = true;
         }
 
         if (isAction) {
@@ -87,22 +84,22 @@ class CalculatorUI {
         // first time selecting operator
         if (this.calc.operator == null) {
             this.calc.operator = key;
-            this.handleOperatorChange();
+            this.handleInitialOperatorChange();
         } else {
-            // TODO: Handle change of operator
-
-            this.calc.operator = this.prevOperator;
-            this.calc.num1 = this.prevNumber;
-            this.calc.num2 = this.currNumber;
+            // Only update while operator not already selected.
+            if (this.operatorSelected == false) {
+                this.calc.operator = this.prevOperator;
+                this.calc.num1 = this.prevNumber;
+                this.calc.num2 = this.currNumber;
+            }
         }
-
 
         this.prevNumber = this.calc.calculate();
         this.displayScreen.value = this.calc.total;
         this.prevOperator = key;
     }
 
-    handleOperatorChange() {
+    handleInitialOperatorChange() {
         const operator = this.calc.operator;
 
         if (operator == "*" || operator == "/") {
