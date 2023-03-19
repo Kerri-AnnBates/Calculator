@@ -25,12 +25,14 @@ class CalculatorUI {
         const isDecimal = e.target.id == "decimal";
         const key = e.target.dataset.key;
 
+        console.log("operated selected:", this.operatorSelected);
         if (isNumber || isDecimal) {
             // console.log("I'm a number. Or decimal");
 
             // Update numbers in screen
             this.updateDisplay(key, isDecimal);
             this.currNumber = this.convertIfNumber(this.displayScreen.value);
+            this.operatorSelected = false;
         }
 
         if (isOperator) {
@@ -38,6 +40,7 @@ class CalculatorUI {
             console.log("Current number is", this.currNumber);
             console.log("Previous number is", this.prevNumber);
 
+            this.operatorSelected = true;
             this.handleOperatorClick(key);
         }
 
@@ -71,14 +74,12 @@ class CalculatorUI {
             } else {
                 this.displayScreen.value = key;
             }
-            this.operatorSelected = false;
         } else {
             this.displayScreen.value += key;
         }
     }
 
     handleOperatorClick(key) {
-        this.operatorSelected = true;
         this.prevOperator = this.operator;
         this.operator = key;
         console.log("Previous operator", this.prevOperator);
@@ -86,7 +87,7 @@ class CalculatorUI {
         // first time selecting operator
         if (this.calc.operator == null) {
             this.calc.operator = key;
-            this.handleOperatorChange(key, this.currNumber);
+            this.handleOperatorChange();
         } else {
             // TODO: Handle change of operator
 
@@ -101,12 +102,14 @@ class CalculatorUI {
         this.prevOperator = key;
     }
 
-    handleOperatorChange(operator, savedNumber) {
+    handleOperatorChange() {
+        const operator = this.calc.operator;
+
         if (operator == "*" || operator == "/") {
-            this.calc.num1 = savedNumber;
+            this.calc.num1 = this.currNumber;
             this.calc.num2 = 1;
         } else {
-            this.calc.num1 = savedNumber;
+            this.calc.num1 = this.currNumber;
             this.calc.num2 = 0;
         }
     }
