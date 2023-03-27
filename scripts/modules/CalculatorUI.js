@@ -96,7 +96,7 @@ class CalculatorUI {
         }
 
         this.prevNumber = this.calc.calculate();
-        this.displayScreen.value = this.calc.total;
+        this.displayScreen.value = this.calc.total.toFixed(2);
         this.prevOperator = key;
     }
 
