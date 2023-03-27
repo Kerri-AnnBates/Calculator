@@ -26,7 +26,6 @@ class CalculatorUI {
         const key = e.target.dataset.key;
 
         if (isNumber || isDecimal) {
-            // Update numbers in screen
             this.updateDisplay(key, isDecimal);
 
             this.currNumber = this.convertIfNumber(this.displayScreen.value);
@@ -34,9 +33,6 @@ class CalculatorUI {
         }
 
         if (isOperator) {
-            // console.log("Current number is", this.currNumber);
-            // console.log("Previous number is", this.prevNumber);
-
             this.handleOperatorClick(key);
             this.operatorSelected = true;
         }
@@ -59,6 +55,11 @@ class CalculatorUI {
     }
 
     updateDisplay(key, isDecimal) {
+        // Prevent duplicate decimal in display
+        if (this.displayScreen.value.indexOf(".") > 0 && isDecimal) {
+            return;
+        }
+
         if (this.displayScreen.value === "0") {
             if (isDecimal) {
                 this.displayScreen.value += key;
