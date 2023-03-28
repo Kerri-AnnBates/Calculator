@@ -38,7 +38,7 @@ class CalculatorUI {
         }
 
         if (isAction) {
-            console.log("I'm an action");
+            this.handleAction(key);
         }
     }
 
@@ -109,6 +109,22 @@ class CalculatorUI {
         } else {
             this.calc.num1 = this.currNumber;
             this.calc.num2 = 0;
+        }
+    }
+
+    handleAction(key) {
+        if (key == "delete") {
+            this.deleteLastNumber();
+        }
+    }
+
+    deleteLastNumber() {
+        const display = this.displayScreen.value;
+
+        if (display.length > 1) {
+            this.displayScreen.value = display.slice(0, display.length - 1);
+        } else {
+            this.displayScreen.value = 0;
         }
     }
 }
