@@ -116,6 +116,11 @@ class CalculatorUI {
         if (key == "delete") {
             this.deleteLastNumber();
         }
+
+        if (key == "clear") {
+            this.calc.clearAll();
+            this.displayScreen.value = this.calc.total;
+        }
     }
 
     deleteLastNumber() {
