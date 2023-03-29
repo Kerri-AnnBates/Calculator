@@ -6,10 +6,10 @@ class CalculatorUI {
         this.displayScreen = document.querySelector("#screen");
         this.prevNumber = 0;
         this.currNumber = 0;
-        this.operator = null;
-        this.prevOperator = this.operator;
+        this.currOperator = null;
+        this.prevOperator = this.currOperator;
         this.operatorSelected = false;
-        this.calc = new Calculator(this.prevNumber, this.currNumber, 0, this.operator);
+        this.calc = new Calculator(this.prevNumber, this.currNumber, 0, this.currOperator);
         this.initDisplay();
         this.events();
     }
@@ -27,7 +27,6 @@ class CalculatorUI {
 
         if (isNumber || isDecimal) {
             this.updateDisplay(key, isDecimal);
-
             this.currNumber = this.convertIfNumber(this.displayScreen.value);
             this.operatorSelected = false;
         }
@@ -78,21 +77,14 @@ class CalculatorUI {
     }
 
     handleOperatorClick(key) {
-        this.prevOperator = this.operator;
-        this.operator = key;
+        this.prevOperator = this.currOperator;
+        this.currOperator = key;
         console.log("Previous operator", this.prevOperator);
 
-        // first time selecting operator
         if (this.calc.operator == null) {
-            this.calc.operator = key;
-            this.handleInitialOperatorChange();
+            this.handleInitialOperatorChange(key);
         } else {
-            // Only update while operator not already selected.
-            if (this.operatorSelected == false) {
-                this.calc.operator = this.prevOperator;
-                this.calc.num1 = this.prevNumber;
-                this.calc.num2 = this.currNumber;
-            }
+            this.updateOperandsAndOperator();
         }
 
         this.prevNumber = this.calc.calculate();
@@ -100,7 +92,8 @@ class CalculatorUI {
         this.prevOperator = key;
     }
 
-    handleInitialOperatorChange() {
+    handleInitialOperatorChange(selectedOperator) {
+        this.calc.operator = selectedOperator;
         const operator = this.calc.operator;
 
         if (operator == "*" || operator == "/") {
@@ -109,6 +102,15 @@ class CalculatorUI {
         } else {
             this.calc.num1 = this.currNumber;
             this.calc.num2 = 0;
+        }
+    }
+
+    updateOperandsAndOperator() {
+        // Only update while operator not already selected.
+        if (this.operatorSelected == false) {
+            this.calc.operator = this.prevOperator;
+            this.calc.num1 = this.prevNumber;
+            this.calc.num2 = this.currNumber;
         }
     }
 
@@ -131,6 +133,8 @@ class CalculatorUI {
         } else {
             this.displayScreen.value = 0;
         }
+
+        // TODO: Remember to also update operand as we remove last number
     }
 }
 
