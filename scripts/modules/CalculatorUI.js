@@ -134,7 +134,7 @@ class CalculatorUI {
             this.displayScreen.value = 0;
         }
 
-        // TODO: Remember to also update operand as we remove last number
+        this.currNumber = this.convertIfNumber(this.displayScreen.value);
     }
 }
 
