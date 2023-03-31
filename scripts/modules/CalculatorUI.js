@@ -6,9 +6,9 @@ class CalculatorUI {
         this.displayScreen = document.querySelector("#screen");
         this.prevNumber = 0;
         this.currNumber = 0;
-        this.currOperator = null;
-        this.prevOperator = this.currOperator;
+        this.prevOperator = null;
         this.operatorSelected = false;
+        this.equalSelected = false;
         this.calc = new Calculator(this.prevNumber, this.currNumber, 0, this.currOperator);
         this.initDisplay();
         this.events();
@@ -29,10 +29,12 @@ class CalculatorUI {
             this.updateDisplay(key, isDecimal);
             this.currNumber = this.convertIfNumber(this.displayScreen.value);
             this.operatorSelected = false;
+            this.equalSelected = false;
         }
 
         if (isOperator) {
             this.handleOperatorClick(key);
+            this.equalSelected = false;
             this.operatorSelected = true;
         }
 
@@ -77,12 +79,12 @@ class CalculatorUI {
     }
 
     handleOperatorClick(key) {
-        this.prevOperator = this.currOperator;
-        this.currOperator = key;
         console.log("Previous operator", this.prevOperator);
 
         if (this.calc.operator == null) {
             this.handleInitialOperatorChange(key);
+        } else if (this.equalSelected) {
+            this.changeFromEqualToSelectedOperator(key);
         } else {
             this.updateOperandsAndOperator();
         }
@@ -123,6 +125,13 @@ class CalculatorUI {
             this.calc.clearAll();
             this.displayScreen.value = this.calc.total;
         }
+
+        if (key == "=") {
+            this.updateOperandsAndOperator();
+            this.prevNumber = this.calc.calculate();
+            this.displayScreen.value = this.calc.total.toFixed(2);
+            this.equalSelected = true;
+        }
     }
 
     deleteLastNumber() {
@@ -135,6 +144,11 @@ class CalculatorUI {
         }
 
         this.currNumber = this.convertIfNumber(this.displayScreen.value);
+    }
+
+    changeFromEqualToSelectedOperator(operater) {
+        this.currNumber = this.calc.total;
+        this.handleInitialOperatorChange(operater);
     }
 }
 
