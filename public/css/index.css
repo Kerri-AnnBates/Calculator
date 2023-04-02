@@ -331,6 +331,8 @@ body {
   font-size: 2rem;
   font-family: 'Rubik', sans-serif;
   font-weight: 700; }
+  body.theme-2 {
+    background-color: #e6e6e6; }
 
 main {
   flex: 1;
@@ -376,6 +378,8 @@ button {
   display: flex;
   justify-content: center;
   background-color: #3a4764; }
+  .calculator.theme-2 {
+    background-color: #e6e6e6; }
 
 .calc-wrapper {
   max-width: 500px;
@@ -412,6 +416,9 @@ button {
 
 .theme-header {
   margin-right: 10px; }
+
+.theme-picker.theme-2 {
+  color: #35352c; }
 
 .theme-picker label {
   font-size: 0.75rem;
