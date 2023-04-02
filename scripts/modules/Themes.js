@@ -4,6 +4,14 @@ class Themes {
         this.calculatorElement = document.querySelector(".calculator");
         this.bodyElement = document.querySelector("body");
         this.pickerElement = document.querySelector(".theme-picker");
+        this.optionElements = document.querySelectorAll(".option");
+        this.equalElement = document.querySelector(".equal");
+        this.keypadElement = document.querySelector(".keypad");
+        this.buttonElements = document.querySelectorAll("button");
+        this.screenElement = document.querySelector(".display input");
+        this.toggleArea = document.querySelector(".theme-selectors");
+        this.toggleButtonElement = document.querySelector(".theme-selectors input");
+        this.headerElement = document.querySelector(".calc-header");
         this.events();
     }
 
@@ -25,6 +33,20 @@ class Themes {
         this.calculatorElement.classList.add("theme-2");
         this.bodyElement.classList.add("theme-2");
         this.pickerElement.classList.add("theme-2");
+        this.equalElement.classList.add("theme-2");
+        this.keypadElement.classList.add("theme-2");
+        this.screenElement.classList.add("theme-2");
+        this.toggleArea.classList.add("theme-2");
+        this.toggleButtonElement.classList.add("theme-2");
+        this.headerElement.classList.add("theme-2");
+
+        this.buttonElements.forEach(el => {
+            el.classList.add("theme-2");
+        });
+
+        this.optionElements.forEach(el => {
+            el.classList.add("theme-2");
+        });
     }
 
     resetThemes() {
@@ -36,6 +58,20 @@ class Themes {
         this.calculatorElement.classList.remove("theme-2");
         this.bodyElement.classList.remove("theme-2");
         this.pickerElement.classList.remove("theme-2");
+        this.equalElement.classList.remove("theme-2");
+        this.keypadElement.classList.remove("theme-2");
+        this.screenElement.classList.remove("theme-2");
+        this.toggleArea.classList.remove("theme-2");
+        this.toggleButtonElement.classList.remove("theme-2");
+        this.headerElement.classList.remove("theme-2");
+
+        this.buttonElements.forEach(el => {
+            el.classList.remove("theme-2");
+        });
+
+        this.optionElements.forEach(el => {
+            el.classList.remove("theme-2");
+        });
     }
 
     resetTheme3() {

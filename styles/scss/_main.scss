@@ -56,6 +56,12 @@ button {
     font-size: 2rem;
     @include key-shadow($keyShadow3);
 
+    &.theme-2 {
+        color: $theme2KeyText;
+        background-color: $theme2KeyBackground2;
+        @include key-shadow($theme2KeyShadow3);
+    }
+
     &:hover {
         cursor: pointer;
     }

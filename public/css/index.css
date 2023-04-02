@@ -360,6 +360,10 @@ button {
   border: none;
   font-size: 2rem;
   box-shadow: 0 4px 0 #b4a597; }
+  button.theme-2 {
+    color: #35352c;
+    background-color: #e5e4e1;
+    box-shadow: 0 4px 0 #a69d91; }
   button:hover {
     cursor: pointer; }
 
@@ -393,6 +397,8 @@ button {
   justify-content: space-between;
   align-items: center;
   position: relative; }
+  .calc-header.theme-2 {
+    color: #35352c; }
   .calc-header h1 {
     flex: 1; }
 
@@ -406,6 +412,9 @@ button {
     border-radius: 6px;
     color: #fff;
     width: 100%; }
+    .display input.theme-2 {
+      background-color: #ededed;
+      color: #35352c; }
 
 .theme-wrapper {
   text-transform: uppercase;
@@ -436,6 +445,8 @@ button {
   border-radius: 6px;
   padding: 25px;
   font-size: 1.25rem; }
+  .keypad.theme-2 {
+    background-color: #d1cccc; }
 
 .grid {
   display: grid;
@@ -455,12 +466,20 @@ button {
   color: white;
   text-transform: uppercase;
   box-shadow: 0 4px 0 #404e72; }
+  .option.theme-2 {
+    color: white;
+    background-color: #377f86;
+    box-shadow: 0 4px 0 #1b5f65; }
 
 .equal {
   background-color: #93261a;
   color: white;
   background-color: #d03f2f;
   box-shadow: 0 4px 0 #93261a; }
+  .equal.theme-2 {
+    color: white;
+    background-color: #ca5502;
+    box-shadow: 0 4px 0 #893901; }
 
 .theme-selectors {
   display: flex;
@@ -468,6 +487,9 @@ button {
   border: 5px solid #232c43;
   border-radius: 50px;
   background-color: #232c43; }
+  .theme-selectors.theme-2 {
+    border-color: #d1cccc;
+    background-color: #d1cccc; }
   .theme-selectors input {
     height: 20px;
     width: 20px;
@@ -475,6 +497,8 @@ button {
     background-color: #d03f2f;
     opacity: 0;
     appearance: none; }
+    .theme-selectors input.theme-2 {
+      background-color: #ca5502; }
     .theme-selectors input:checked {
       opacity: 1; }
     .theme-selectors input:hover {
