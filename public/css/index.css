@@ -333,6 +333,8 @@ body {
   font-weight: 700; }
   body.theme-2 {
     background-color: #e6e6e6; }
+  body.theme-3 {
+    background-color: #160628; }
 
 main {
   flex: 1;
@@ -364,6 +366,10 @@ button {
     color: #35352c;
     background-color: #e5e4e1;
     box-shadow: 0 4px 0 #a69d91; }
+  button.theme-3 {
+    color: #ffe53d;
+    background-color: #341c4f;
+    box-shadow: 0 4px 0 #871c9c; }
   button:hover {
     cursor: pointer; }
 
@@ -384,6 +390,8 @@ button {
   background-color: #3a4764; }
   .calculator.theme-2 {
     background-color: #e6e6e6; }
+  .calculator.theme-3 {
+    background-color: #160628; }
 
 .calc-wrapper {
   max-width: 500px;
@@ -399,6 +407,8 @@ button {
   position: relative; }
   .calc-header.theme-2 {
     color: #35352c; }
+  .calc-header.theme-3 {
+    color: #ffe53d; }
   .calc-header h1 {
     flex: 1; }
 
@@ -415,6 +425,9 @@ button {
     .display input.theme-2 {
       background-color: #ededed;
       color: #35352c; }
+    .display input.theme-3 {
+      background-color: #1d0934;
+      color: #ffe53d; }
 
 .theme-wrapper {
   text-transform: uppercase;
@@ -428,6 +441,9 @@ button {
 
 .theme-picker.theme-2 {
   color: #35352c; }
+
+.theme-picker.theme-3 {
+  color: #ffe53d; }
 
 .theme-picker label {
   font-size: 0.75rem;
@@ -447,6 +463,8 @@ button {
   font-size: 1.25rem; }
   .keypad.theme-2 {
     background-color: #d1cccc; }
+  .keypad.theme-3 {
+    background-color: #1d0934; }
 
 .grid {
   display: grid;
@@ -470,6 +488,10 @@ button {
     color: white;
     background-color: #377f86;
     box-shadow: 0 4px 0 #1b5f65; }
+  .option.theme-3 {
+    color: white;
+    background-color: #58077d;
+    box-shadow: 0 4px 0 #bc15f4; }
 
 .equal {
   background-color: #93261a;
@@ -480,6 +502,10 @@ button {
     color: white;
     background-color: #ca5502;
     box-shadow: 0 4px 0 #893901; }
+  .equal.theme-3 {
+    color: #000;
+    background-color: #00e0d1;
+    box-shadow: 0 4px 0 #6cf9f2; }
 
 .theme-selectors {
   display: flex;
@@ -490,6 +516,9 @@ button {
   .theme-selectors.theme-2 {
     border-color: #d1cccc;
     background-color: #d1cccc; }
+  .theme-selectors.theme-3 {
+    border-color: #1d0934;
+    background-color: #1d0934; }
   .theme-selectors input {
     height: 20px;
     width: 20px;
@@ -499,6 +528,8 @@ button {
     appearance: none; }
     .theme-selectors input.theme-2 {
       background-color: #ca5502; }
+    .theme-selectors input.theme-3 {
+      background-color: #00e0d1; }
     .theme-selectors input:checked {
       opacity: 1; }
     .theme-selectors input:hover {

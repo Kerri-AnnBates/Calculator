@@ -27,6 +27,10 @@ class Themes {
         if (theme.value == 2) {
             this.updateToTheme2();
         }
+
+        if (theme.value == 3) {
+            this.updateToTheme3();
+        }
     }
 
     updateToTheme2() {
@@ -46,6 +50,26 @@ class Themes {
 
         this.optionElements.forEach(el => {
             el.classList.add("theme-2");
+        });
+    }
+
+    updateToTheme3() {
+        this.calculatorElement.classList.add("theme-3");
+        this.bodyElement.classList.add("theme-3");
+        this.pickerElement.classList.add("theme-3");
+        this.equalElement.classList.add("theme-3");
+        this.keypadElement.classList.add("theme-3");
+        this.screenElement.classList.add("theme-3");
+        this.toggleArea.classList.add("theme-3");
+        this.toggleButtonElement.classList.add("theme-3");
+        this.headerElement.classList.add("theme-3");
+
+        this.buttonElements.forEach(el => {
+            el.classList.add("theme-3");
+        });
+
+        this.optionElements.forEach(el => {
+            el.classList.add("theme-3");
         });
     }
 
@@ -78,6 +102,20 @@ class Themes {
         this.calculatorElement.classList.remove("theme-3");
         this.bodyElement.classList.remove("theme-3");
         this.pickerElement.classList.remove("theme-3");
+        this.equalElement.classList.remove("theme-3");
+        this.keypadElement.classList.remove("theme-3");
+        this.screenElement.classList.remove("theme-3");
+        this.toggleArea.classList.remove("theme-3");
+        this.toggleButtonElement.classList.remove("theme-3");
+        this.headerElement.classList.remove("theme-3");
+
+        this.buttonElements.forEach(el => {
+            el.classList.remove("theme-3");
+        });
+
+        this.optionElements.forEach(el => {
+            el.classList.remove("theme-3");
+        });
     }
 }
 

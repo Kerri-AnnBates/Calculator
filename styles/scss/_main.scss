@@ -24,6 +24,10 @@ body {
     &.theme-2 {
         background-color: $theme2MainBackground;
     }
+
+    &.theme-3 {
+        background-color: $theme3MainBackground;
+    }
 }
 
 main {
@@ -60,6 +64,12 @@ button {
         color: $theme2KeyText;
         background-color: $theme2KeyBackground2;
         @include key-shadow($theme2KeyShadow3);
+    }
+
+    &.theme-3 {
+        color: $theme3KeyText;
+        background-color: $theme3KeyBackground2;
+        @include key-shadow($theme3KeyShadow3);
     }
 
     &:hover {
