@@ -40,6 +40,7 @@ class CalculatorUI {
 
         if (isAction) {
             this.handleAction(key);
+            this.operatorSelected = false;
         }
     }
 
@@ -119,11 +120,13 @@ class CalculatorUI {
     handleAction(key) {
         if (key == "delete") {
             this.deleteLastNumber();
+            this.equalSelected = false;
         }
 
         if (key == "clear") {
             this.calc.clearAll();
             this.displayScreen.value = this.calc.total;
+            this.equalSelected = false;
         }
 
         if (key == "=") {
