@@ -15,6 +15,7 @@ class CalculatorUI {
     }
 
     events() {
+        this.displayScreen.addEventListener("keydown", (e) => e.preventDefault());
         this.buttons.forEach(button => button.addEventListener("click", (e) => this.execute(e)));
     }
 
