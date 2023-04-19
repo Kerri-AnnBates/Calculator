@@ -92,7 +92,7 @@ class CalculatorUI {
         }
 
         this.prevNumber = this.calc.calculate();
-        this.displayScreen.value = this.calc.total.toFixed(2);
+        this.displayScreen.value = this.calc.total;
         this.prevOperator = key;
     }
 
@@ -133,7 +133,7 @@ class CalculatorUI {
         if (key == "=") {
             this.updateOperandsAndOperator();
             this.prevNumber = this.calc.calculate();
-            this.displayScreen.value = this.calc.total.toFixed(2);
+            this.displayScreen.value = this.calc.total;
             this.equalSelected = true;
         }
     }
