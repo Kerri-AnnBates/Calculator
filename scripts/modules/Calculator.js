@@ -82,7 +82,6 @@ class Calculator {
                 break;
         }
 
-        console.log("operator: " + this.#operator, "num1: " + this.#num1, " num2: " + this.#num2, "total is: " + this.#total);
         return this.#total;
     }
 
