@@ -147,10 +147,21 @@
         background-color: $theme3KeyBackground;
         @include key-shadow($theme3KeyShadow);
     }
+
+    &:hover {
+        background-color: lighten($color: $keyBackground, $amount: 10%);
+
+        &.theme-2 {
+            background-color: lighten($color: $theme2KeyBackground, $amount: 10%);
+        }
+
+        &.theme-3 {
+            background-color: lighten($color: $theme3KeyBackground, $amount: 10%);
+        }
+    }
 }
 
 .equal {
-    background-color: $keyShadow2;
     color: white;
     background-color: $keyToggle;
     @include key-shadow($keyShadow2);
@@ -165,6 +176,18 @@
         color: #000;
         background-color: $theme3KeyToggle;
         @include key-shadow($theme3KeyShadow2);
+    }
+
+    &:hover {
+        background-color: lighten($color: $keyToggle, $amount: 10%);
+
+        &.theme-2 {
+            background-color: lighten($color: $theme2KeyToggle, $amount: 10%);
+        }
+
+        &.theme-3 {
+            background-color: lighten($color: $theme3KeyToggle, $amount: 10%);
+        }
     }
 }
 
@@ -207,6 +230,15 @@
 
         &:hover {
             cursor: pointer;
+            background-color: lighten($color: $keyToggle, $amount: 10%);
+
+            &.theme-2 {
+                background-color: lighten($color: $theme2KeyToggle, $amount: 10%);
+            }
+
+            &.theme-3 {
+                background-color: lighten($color: $theme3KeyToggle, $amount: 10%);
+            }
         }
     }
 }

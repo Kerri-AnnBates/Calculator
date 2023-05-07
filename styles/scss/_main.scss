@@ -74,6 +74,15 @@ button {
 
     &:hover {
         cursor: pointer;
+        background-color: lighten($color: $keyBackground2, $amount: 10%);
+
+        &.theme-2 {
+            background-color: lighten($color: $theme2KeyBackground2, $amount: 10%);
+        }
+
+        &.theme-3 {
+            background-color: lighten($color: $theme3KeyBackground2, $amount: 10%);
+        }
     }
 }
 

@@ -10,7 +10,7 @@ class Themes {
         this.buttonElements = document.querySelectorAll("button");
         this.screenElement = document.querySelector(".display input");
         this.toggleArea = document.querySelector(".theme-selectors");
-        this.toggleButtonElement = document.querySelector(".theme-selectors input");
+        this.toggleButtonElements = document.querySelectorAll(".theme-selectors input");
         this.headerElement = document.querySelector(".calc-header");
         this.events();
     }
@@ -41,7 +41,6 @@ class Themes {
         this.keypadElement.classList.add("theme-2");
         this.screenElement.classList.add("theme-2");
         this.toggleArea.classList.add("theme-2");
-        this.toggleButtonElement.classList.add("theme-2");
         this.headerElement.classList.add("theme-2");
 
         this.buttonElements.forEach(el => {
@@ -49,6 +48,10 @@ class Themes {
         });
 
         this.optionElements.forEach(el => {
+            el.classList.add("theme-2");
+        });
+
+        this.toggleButtonElements.forEach(el => {
             el.classList.add("theme-2");
         });
     }
@@ -61,7 +64,6 @@ class Themes {
         this.keypadElement.classList.add("theme-3");
         this.screenElement.classList.add("theme-3");
         this.toggleArea.classList.add("theme-3");
-        this.toggleButtonElement.classList.add("theme-3");
         this.headerElement.classList.add("theme-3");
 
         this.buttonElements.forEach(el => {
@@ -69,6 +71,10 @@ class Themes {
         });
 
         this.optionElements.forEach(el => {
+            el.classList.add("theme-3");
+        });
+
+        this.toggleButtonElements.forEach(el => {
             el.classList.add("theme-3");
         });
     }
@@ -86,7 +92,6 @@ class Themes {
         this.keypadElement.classList.remove("theme-2");
         this.screenElement.classList.remove("theme-2");
         this.toggleArea.classList.remove("theme-2");
-        this.toggleButtonElement.classList.remove("theme-2");
         this.headerElement.classList.remove("theme-2");
 
         this.buttonElements.forEach(el => {
@@ -94,6 +99,10 @@ class Themes {
         });
 
         this.optionElements.forEach(el => {
+            el.classList.remove("theme-2");
+        });
+
+        this.toggleButtonElements.forEach(el => {
             el.classList.remove("theme-2");
         });
     }
@@ -106,7 +115,6 @@ class Themes {
         this.keypadElement.classList.remove("theme-3");
         this.screenElement.classList.remove("theme-3");
         this.toggleArea.classList.remove("theme-3");
-        this.toggleButtonElement.classList.remove("theme-3");
         this.headerElement.classList.remove("theme-3");
 
         this.buttonElements.forEach(el => {
@@ -114,6 +122,10 @@ class Themes {
         });
 
         this.optionElements.forEach(el => {
+            el.classList.remove("theme-3");
+        });
+
+        this.toggleButtonElements.forEach(el => {
             el.classList.remove("theme-3");
         });
     }

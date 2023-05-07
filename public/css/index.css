@@ -371,7 +371,12 @@ button {
     background-color: #341c4f;
     box-shadow: 0 4px 0 #871c9c; }
   button:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    background-color: #fdfdfc; }
+    button:hover.theme-2 {
+      background-color: #fdfdfc; }
+    button:hover.theme-3 {
+      background-color: #4d2975; }
 
 .container {
   max-width: 1000px;
@@ -492,9 +497,14 @@ button {
     color: white;
     background-color: #58077d;
     box-shadow: 0 4px 0 #bc15f4; }
+  .option:hover {
+    background-color: #818cac; }
+    .option:hover.theme-2 {
+      background-color: #46a1aa; }
+    .option:hover.theme-3 {
+      background-color: #7a0aad; }
 
 .equal {
-  background-color: #93261a;
   color: white;
   background-color: #d03f2f;
   box-shadow: 0 4px 0 #93261a; }
@@ -506,6 +516,12 @@ button {
     color: #000;
     background-color: #00e0d1;
     box-shadow: 0 4px 0 #6cf9f2; }
+  .equal:hover {
+    background-color: #d96559; }
+    .equal:hover.theme-2 {
+      background-color: #fd6a03; }
+    .equal:hover.theme-3 {
+      background-color: #14ffef; }
 
 .theme-selectors {
   display: flex;
@@ -533,4 +549,9 @@ button {
     .theme-selectors input:checked {
       opacity: 1; }
     .theme-selectors input:hover {
-      cursor: pointer; }
+      cursor: pointer;
+      background-color: #d96559; }
+      .theme-selectors input:hover.theme-2 {
+        background-color: #fd6a03; }
+      .theme-selectors input:hover.theme-3 {
+        background-color: #14ffef; }
