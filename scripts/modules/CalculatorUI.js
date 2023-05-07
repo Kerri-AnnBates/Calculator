@@ -28,7 +28,7 @@ class CalculatorUI {
 
         if (isNumber || isDecimal) {
             this.updateDisplay(key, isDecimal);
-            this.currNumber = this.convertIfNumber(this.displayScreen.value);
+            this.currNumber = this.convertToNumber(this.displayScreen.value);
             this.operatorSelected = false;
             this.equalSelected = false;
         }
@@ -49,12 +49,13 @@ class CalculatorUI {
         this.displayScreen.value = this.currNumber;
     }
 
-    convertIfNumber(value) {
-        if (isNaN(value)) {
-            return value;
-        }
+    convertToNumber(value) {
+        let pureVal = value.replace(",", "");
+        return +pureVal;
+    }
 
-        return parseFloat(value);
+    convertToString(val) {
+        return val.toLocaleString();
     }
 
     updateDisplay(key, isDecimal) {
@@ -78,11 +79,12 @@ class CalculatorUI {
         } else {
             this.displayScreen.value += key;
         }
+
+        let num = this.convertToNumber(this.displayScreen.value);
+        this.displayScreen.value = this.convertToString(num);
     }
 
     handleOperatorClick(key) {
-        console.log("Previous operator", this.prevOperator);
-
         if (this.calc.operator == null) {
             this.handleInitialOperatorChange(key);
         } else if (this.equalSelected) {
@@ -92,7 +94,7 @@ class CalculatorUI {
         }
 
         this.prevNumber = this.calc.calculate();
-        this.displayScreen.value = this.calc.total;
+        this.displayScreen.value = this.convertToString(this.calc.total);
         this.prevOperator = key;
     }
 
@@ -133,7 +135,7 @@ class CalculatorUI {
         if (key == "=") {
             this.updateOperandsAndOperator();
             this.prevNumber = this.calc.calculate();
-            this.displayScreen.value = this.calc.total;
+            this.displayScreen.value = this.convertToString(this.calc.total);
             this.equalSelected = true;
         }
     }
@@ -147,7 +149,7 @@ class CalculatorUI {
             this.displayScreen.value = 0;
         }
 
-        this.currNumber = this.convertIfNumber(this.displayScreen.value);
+        this.currNumber = this.convertToNumber(this.displayScreen.value);
     }
 
     changeFromEqualToSelectedOperator(operater) {
