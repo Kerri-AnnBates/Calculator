@@ -60,6 +60,11 @@ button {
     font-size: 2rem;
     @include key-shadow($keyShadow3);
 
+    @media (max-width: 400px) {
+        font-size: 1.8rem;
+        padding: 10px;
+    }
+
     &.theme-2 {
         color: $theme2KeyText;
         background-color: $theme2KeyBackground2;
