@@ -50,12 +50,19 @@ class CalculatorUI {
     }
 
     convertToNumber(value) {
-        let pureVal = value.replace(",", "");
+        let pureVal = value.replaceAll(",", "");
         return +pureVal;
     }
 
-    convertToString(val) {
-        return val.toLocaleString();
+    convertToFormattedString(val) {
+        let pureVal = val.replaceAll(",", "");
+
+        // Add commas to number e.g 1,000,000
+        let formattedNumber = pureVal.replace(/^[+-]?\d+/g, (int) => {
+            return int.replace(/(\d)(?=(\d{3})+$)/g, '$1,');
+        });
+
+        return formattedNumber;
     }
 
     updateDisplay(key, isDecimal) {
@@ -80,7 +87,7 @@ class CalculatorUI {
             this.displayScreen.value += key;
         }
 
-        this.displayScreen.value = this.convertToString(this.displayScreen.value);
+        this.displayScreen.value = this.convertToFormattedString(this.displayScreen.value);
     }
 
     handleOperatorClick(key) {
@@ -93,7 +100,7 @@ class CalculatorUI {
         }
 
         this.prevNumber = this.calc.calculate();
-        this.displayScreen.value = this.convertToString(this.calc.total);
+        this.displayScreen.value = this.convertToFormattedString(this.calc.total.toString());
         this.prevOperator = key;
     }
 
@@ -134,7 +141,7 @@ class CalculatorUI {
         if (key == "=") {
             this.updateOperandsAndOperator();
             this.prevNumber = this.calc.calculate();
-            this.displayScreen.value = this.convertToString(this.calc.total);
+            this.displayScreen.value = this.convertToFormattedString(this.calc.total.toString());
             this.equalSelected = true;
         }
     }
