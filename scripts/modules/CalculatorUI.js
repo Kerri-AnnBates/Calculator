@@ -9,7 +9,7 @@ class CalculatorUI {
         this.prevOperator = null;
         this.operatorSelected = false;
         this.equalSelected = false;
-        this.calc = new Calculator(this.prevNumber, this.currNumber, 0, this.currOperator);
+        this.calc = new Calculator(this.prevNumber, this.currNumber, 0, this.prevOperator);
         this.initDisplay();
         this.events();
     }
