@@ -80,8 +80,7 @@ class CalculatorUI {
             this.displayScreen.value += key;
         }
 
-        let num = this.convertToNumber(this.displayScreen.value);
-        this.displayScreen.value = this.convertToString(num);
+        this.displayScreen.value = this.convertToString(this.displayScreen.value);
     }
 
     handleOperatorClick(key) {
